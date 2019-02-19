@@ -1,0 +1,12 @@
+{% extends "admin/base_site.html" %}
+{% load humanize %}
+
+{% block content %}
+<div class="row">
+    {% for movimiento in movimientos %}
+    <div>
+        <label>{{ movimiento.categoria }}: $ {{ movimiento.total|intcomma }}</label>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
