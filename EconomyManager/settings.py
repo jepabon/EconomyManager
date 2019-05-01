@@ -50,8 +50,7 @@ INSTALLED_APPS = [
     'EconomyManager.apps.cuenta',
     'EconomyManager.apps.grupo',
     'EconomyManager.apps.movimiento',
-    'EconomyManager.apps.cuenta_grupo',
-    'EconomyManager.apps.app_base'
+    'EconomyManager.apps.cuenta_grupo'
 ]
 
 MIDDLEWARE = [
