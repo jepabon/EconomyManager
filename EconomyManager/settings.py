@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'EconomyManager.apps.grupo',
     'EconomyManager.apps.movimiento',
     'EconomyManager.apps.cuenta_grupo',
+    'EconomyManager.apps.app_base'
 ]
 
 MIDDLEWARE = [
@@ -112,11 +113,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LOGIN_REDIRECT_URL = '/usuario/login'
+LOGIN_REDIRECT_URL = '/app_base/login'
 
-LOGIN_URL='/usuario/login'
+LOGIN_URL='/app_base/login'
 
-LOGOUT_REDIRECT_URL  = '/usuario/login'
+LOGOUT_REDIRECT_URL  = '/app_base/login'
 
 LANGUAGE_CODE = 'es-co'
 
