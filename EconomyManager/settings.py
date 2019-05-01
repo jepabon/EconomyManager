@@ -43,7 +43,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'EconomyManager.apps.usuario'
+    'EconomyManager.apps.usuario',
+    'EconomyManager.apps.app_base',
+    'EconomyManager.apps.categoria',
+    'EconomyManager.apps.categoria_cuenta',
+    'EconomyManager.apps.cuenta',
+    'EconomyManager.apps.grupo',
+    'EconomyManager.apps.movimiento',
+    'EconomyManager.apps.cuenta_grupo',
 ]
 
 MIDDLEWARE = [
