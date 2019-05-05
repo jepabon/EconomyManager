@@ -16,5 +16,5 @@ Including another URLconf
 from django.urls import path,include
 
 urlpatterns = [
-    path('app_base/', include('EconomyManager.apps.app_base.urls'))
+    path('', include('EconomyManager.apps.app_base.urls'))
 ]

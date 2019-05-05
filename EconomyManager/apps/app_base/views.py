@@ -25,5 +25,5 @@ class LogoutView(View):
 
 class IndexView(View):
     def get(self,request,*args,**kwargs):
-        return HttpResponse('funciona hp')
+        return render(request,'app_base/index.html',{})
 
