@@ -50,7 +50,10 @@ INSTALLED_APPS = [
     'EconomyManager.apps.cuenta',
     'EconomyManager.apps.grupo',
     'EconomyManager.apps.movimiento',
-    'EconomyManager.apps.cuenta_grupo'
+    'EconomyManager.apps.cuenta_grupo',
+    'crispy_forms',
+    'social_django',
+    'rest_framework' 
 ]
 
 MIDDLEWARE = [
@@ -121,6 +124,8 @@ LOGOUT_REDIRECT_URL  = '/app_base/login'
 LANGUAGE_CODE = 'es-co'
 
 TIME_ZONE = 'America/Bogota'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 USE_I18N = True
 
