@@ -11,90 +11,87 @@
 
   <title>Administrador De Economia</title>
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="{% static 'vendor/mdbootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'vendor/mdbootstrap/css/mdb.min.css' %}" rel="stylesheet">
-  <link href="{% static 'vendor/mdbootstrap/css/style.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'vendor/fontawesome/all.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
 
   <!-- Custom styles for this template -->
   <link href="{% static 'css/simple-sidebar.css' %}" rel="stylesheet">
+  <link href="{% static 'css/colors.css' %}" rel="stylesheet">
 
 </head>
 
 <body>
 
-    
+
 
   <div id="wrapper">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-      <div class="wrapper-heading">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-elegant-black">
+      <div class="navbar-brand">
         Administrador De Economia
         <span id="menu-toggle" class="ml-2 navbar-toggler-icon"></span>
-      
       </div>
-        
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler fas fa-chevron-down" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent">
         <span><i class="fas fa-chevron-down"></i></span>
       </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+              Dropdown
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-    <!-- Page Content -->
-    <div class="d-flex" id="page-content-wrapper">
+    <div class="d-flex">
 
-      <!-- Sidebar -->
-      <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="text-white bg-sidebar border-right" id="sidebar-wrapper">
         <div class="mt-3">
-          <img src="{% static 'imagenes/default_profile.png' %}" alt="Not Found" class="w-50 ml-5 mr-1 rounded-circle"/>
+          <img src="{% static 'imagenes/default_profile.png' %}" alt="Not Found"
+            class="w-50 ml-5 mr-1 rounded-circle" />
         </div>
-        <hr/>
+        <br>
         <div class="list-group list-group-flush">
-          <a href="/" class="list-group-item list-group-item-action bg-light">Inicio</a>
+          <a href="{% url 'app_base:index' %}"
+            class="list-group-item list-group-item-action bg-sidebar bg-sidebar-action text-white">Inicio</a>
+          <a href="{% url 'usuario:index' %}"
+            class="list-group-item list-group-item-action bg-sidebar bg-sidebar-action text-white">Usuarios</a>
         </div>
       </div>
-      <!-- /#sidebar-wrapper -->
 
       <div class="container-fluid">
         {% block content %}
-        <h1 class="mt-4">Content</h1>
         {% endblock %}
       </div>
     </div>
-    <!-- /#page-content-wrapper -->
 
   </div>
   <!-- /#wrapper -->
 
   <!-- Bootstrap core JavaScript -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'vendor/mdbootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
 
   <!-- Menu Toggle Script -->
   <script>
-    $("#menu-toggle").click(function(e) {
+    $("#menu-toggle").click(function (e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });

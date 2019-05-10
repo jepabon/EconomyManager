@@ -17,5 +17,5 @@ from django.urls import path,include
 
 urlpatterns = [
     path('', include('EconomyManager.apps.app_base.urls')),
-    path('/usuario', include('EconomyManager.apps.usuario.urls'))
+    path('usuario/', include('EconomyManager.apps.usuario.urls'))
 ]
