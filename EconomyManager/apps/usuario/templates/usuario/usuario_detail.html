@@ -1,0 +1,28 @@
+{% extends 'app_base/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="text-right">
+    <span class="text-muted">Administración > <a class="text-muted" href="{% url 'usuario:index' %}">Usuarios</a></span>
+    > Detalle
+</div>
+<div class="mb-4">
+    <h2 class="font-weight-normal">Usuario <small class="font-weight-lighter text-muted"
+            style="font-size: initial">{{ object }}</small></h2>
+</div>
+<hr>
+<div class="card">
+    <div class="card-header">
+        Datos Basicos
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                <span>Usuario:</span> <small>{{ object.username }}</small>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                <span>Usuario:</span> <small>{{ object.username }}</small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

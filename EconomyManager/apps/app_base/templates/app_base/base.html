@@ -11,12 +11,17 @@
 
   <title>Administrador De Economia</title>
 
-  <link rel="stylesheet" href="{% static 'vendor/fontawesome/all.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/fontawesome-free/css/all.css' %}">
   <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/datatable/datatables.min.css' %}">
 
   <!-- Custom styles for this template -->
   <link href="{% static 'css/simple-sidebar.css' %}" rel="stylesheet">
   <link href="{% static 'css/colors.css' %}" rel="stylesheet">
+
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'vendor/datatable/datatables.min.js' %}"></script>
 
 </head>
 
@@ -40,21 +45,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-              Dropdown
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+            <a class="nav-link sign-out-alt" href="{% url 'app_base:logout' %}">Salir</a>
           </li>
         </ul>
       </div>
@@ -76,18 +67,13 @@
         </div>
       </div>
 
-      <div class="container-fluid">
+      <div class="container-fluid py-3">
         {% block content %}
         {% endblock %}
       </div>
     </div>
 
   </div>
-  <!-- /#wrapper -->
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
 
   <!-- Menu Toggle Script -->
   <script>

@@ -22,6 +22,7 @@ class LoginView(View):
 class LogoutView(View):
     def get(self,request,*args,**kwargs):
         logout(request)
+        return redirect('app_base:login')
 
 class IndexView(View):
     def get(self,request,*args,**kwargs):
