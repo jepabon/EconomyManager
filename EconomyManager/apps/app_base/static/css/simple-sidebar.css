@@ -16,8 +16,8 @@ body {
   transition: margin .25s ease-out;
 }
 
-#sidebar-wrapper .list-group {
-  width: 15rem;
+#sidebar-wrapper{
+  width: 18rem;
 }
 
 /* #page-content-wrapper {

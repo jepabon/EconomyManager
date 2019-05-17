@@ -10,19 +10,35 @@
             style="font-size: initial">{{ object }}</small></h2>
 </div>
 <hr>
-<div class="card">
-    <div class="card-header">
-        Datos Basicos
-    </div>
-    <div class="card-body">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                <span>Usuario:</span> <small>{{ object.username }}</small>
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">
+                Datos Basicos
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                <span>Usuario:</span> <small>{{ object.username }}</small>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <h6>Usuario</h6>{{ object.username }}
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <h6>Nombre</h6>
+                        {{ object.first_name }}
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <h6>Apellido</h6> 
+                        {{ object.last_name }}
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <h6>Fecha Creación</h6>
+                        {{ object.date_joined }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}

@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'EconomyManager.apps.grupo',
     'EconomyManager.apps.movimiento',
     'EconomyManager.apps.cuenta_grupo',
+    'EconomyManager.apps.permiso',
+    'EconomyManager.apps.grupousuario',
     'crispy_forms',
     'social_django',
     'rest_framework' 
